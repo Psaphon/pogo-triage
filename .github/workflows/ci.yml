@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop, "feature/**", "release/**", "hotfix/**"]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run CI
+        run: bash scripts/ci.sh
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shellcheck
+        run: |
+          mapfile -t scripts < <(find . -name "*.sh" ! -path "./.git/*" ! -path "./.ai/*")
+          [ ${#scripts[@]} -eq 0 ] && exit 0
+          shellcheck "${scripts[@]}"
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # gitleaks CLI against the working tree, unpacked to /tmp: the runner user
+      # cannot write /usr/local/bin. Same form as atrade's green CI.
+      - name: Secret scan (gitleaks)
+        run: |
+          GL=8.24.3
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GL}/gitleaks_${GL}_linux_x64.tar.gz" \
+            | tar -xz -C /tmp gitleaks
+          /tmp/gitleaks dir . --redact -v
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependency audit (pip-audit)
+        run: |
+          python -m venv /tmp/auditenv
+          /tmp/auditenv/bin/pip install -q --upgrade pip
+          if [ -f pyproject.toml ]; then
+            /tmp/auditenv/bin/pip install -q -e .
+          elif [ -f requirements.txt ]; then
+            /tmp/auditenv/bin/pip install -q -r requirements.txt
+          fi
+          /tmp/auditenv/bin/pip install -q pip-audit
+          /tmp/auditenv/bin/pip-audit --skip-editable
+  ci-ok:
+    runs-on: ubuntu-latest
+    needs: [lint-and-test, shellcheck, security-scan]
+    if: always()
+    steps:
+      - name: Check job results
+        run: |
+          if [[ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" == "true" ]]; then
+            echo "One or more required jobs did not succeed."
+            exit 1
+          fi
+          echo "All required jobs succeeded."
