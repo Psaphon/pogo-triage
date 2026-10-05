@@ -15,8 +15,8 @@ TELEGRAM_CHAT_ID environment variables.
 import json
 import os
 import sys
-import urllib.request
 import urllib.parse
+import urllib.request
 from pathlib import Path
 
 
