@@ -1,11 +1,15 @@
 [project]
 name = "pogo-triage"
 version = "0.1.0"
+description = "Pokémon GO collection triage: keep/invest/transfer verdicts from a Poke Genie export"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["click", "httpx", "jinja2"]
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "ruff==0.16.4", "yamllint"]
+
+[project.scripts]
+pogo-triage = "pogo_triage.cli:main"
 
 [build-system]
 requires = ["setuptools>=61"]

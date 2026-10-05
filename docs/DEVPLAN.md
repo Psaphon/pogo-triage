@@ -37,13 +37,13 @@ An installable package with a CLI entry point and CI that gates PRs on lint and 
 
 ### Acceptance Criteria
 
-- [ ] In a fresh venv, `pip install -e ".[dev]"` exits 0, and the installed `pogo-triage --help` (run via subprocess) exits 0 and lists `version`
-- [ ] `pogo-triage version` exits 0 and prints the version read from package metadata
-- [ ] `.github/workflows/ci.yml` runs on every PR to `develop`: installs from `pyproject.toml` (`.[dev]`), then runs `ruff check .`, `ruff format --check .`, `yamllint .github/` and `pytest`
-- [ ] ruff is pinned to `0.16.4` in the dev extras, with an explicit `select` in `pyproject.toml`
-- [ ] CI uses no secrets and runs on `pull_request`, never `pull_request_target`
-- [ ] All tests pass
-- [ ] Lint clean
+- [x] In a fresh venv, `pip install -e ".[dev]"` exits 0, and the installed `pogo-triage --help` (run via subprocess) exits 0 and lists `version`
+- [x] `pogo-triage version` exits 0 and prints the version read from package metadata
+- [x] `.github/workflows/ci.yml` runs on every PR to `develop`: installs from `pyproject.toml` (`.[dev]`), then runs `ruff check .`, `ruff format --check .`, `yamllint .github/` and `pytest`
+- [x] ruff is pinned to `0.16.4` in the dev extras, with an explicit `select` in `pyproject.toml`
+- [x] CI uses no secrets and runs on `pull_request`, never `pull_request_target`
+- [x] All tests pass
+- [x] Lint clean
 
 ### Files to Create or Modify
 

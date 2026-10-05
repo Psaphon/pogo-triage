@@ -39,3 +39,10 @@ venv/
 htmlcov/
 .mypy_cache/
 .ruff_cache/
+
+# Pipeline output and cache
+.cache/
+
+# Real Poke Genie exports must never be committed; synthetic fixtures are fine
+*.csv
+!tests/fixtures/*.csv
