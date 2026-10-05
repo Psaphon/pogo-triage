@@ -22,8 +22,10 @@ def test_version_prints_metadata_version():
 
 
 def _console_script() -> str:
-    found = shutil.which("pogo-triage") or str(Path(sys.executable).parent / "pogo-triage")
-    assert Path(found).exists(), "pogo-triage console script is not installed"
+    # Prefer the script next to this interpreter, so a stray install on PATH is never tested.
+    local = Path(sys.executable).parent / "pogo-triage"
+    found = str(local) if local.exists() else shutil.which("pogo-triage")
+    assert found, "pogo-triage console script is not installed"
     return found
 
 
