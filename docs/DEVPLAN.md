@@ -28,7 +28,7 @@ Pokémon GO collection triage. Reads a Poke Genie CSV export, scores every Poké
 
 **Branch:** `feature/project-skeleton`
 **Depends on:** none
-**Status:** Ready (supervised)
+**Status:** Merged (#2)
 **Requires:** ai
 
 ### Goal
@@ -72,7 +72,7 @@ The PM makes the lint and test jobs required checks on `develop` once this merge
 
 **Branch:** `feature/pokegenie-csv-parser`
 **Depends on:** project-skeleton
-**Status:** Held (deps)
+**Status:** Not Started
 **Requires:** ai
 
 ### Goal
@@ -112,7 +112,7 @@ Parse a Poke Genie CSV export into typed records, mapping columns by header name
 
 **Branch:** `feature/pvpoke-rankings-ingest`
 **Depends on:** project-skeleton
-**Status:** Held (deps)
+**Status:** Not Started
 **Requires:** ai
 
 ### Goal
