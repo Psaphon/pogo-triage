@@ -1,0 +1,11 @@
+Name,Form,Nickname,CP,Level Min,Atk IV,Def IV,Sta IV,Quick Move,Charge Move,Charge Move 2,Catch Date,Shiny,Lucky,Shadow,Purified,Costume
+Testmon,,,1500,30,15,15,15,Tackle,Swift,,2024-01-05,0,0,0,0,0
+Shinymon,,Sparkle,800,20.5,10,11,12,Tackle,Swift,,2024-02-10,1,0,0,0,0
+Luckymon,,,1200,25,14,13,15,Scratch,Bite,,2023-12-01,0,1,0,0,0
+Shadowmon,,,2100,35,15,15,14,Scratch,Bite,Swift,2024-03-03,0,0,1,0,0
+Purimon,Alolan,,1900,40,15,15,15,Tackle,Swift,,2024-04-04,0,0,0,1,0
+Costumemon,Party Hat,,600,15,5,6,7,Tackle,Swift,,2024-05-05,0,0,0,0,1
+Combomon,,Combo,3000,50,15,15,15,Scratch,Bite,,2022-06-06,1,1,0,0,0
+Plainmon,,,300,10,1,2,3,Tackle,Swift,,2024-07-07,0,0,0,0,0
+Hundomon,,,1000,22,15,15,15,Tackle,Swift,,2024-08-08,0,0,0,0,0
+Lowmon,,,100,5,0,0,0,Tackle,Swift,,2024-09-09,0,0,0,0,0
