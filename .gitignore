@@ -46,3 +46,4 @@ htmlcov/
 # Real Poke Genie exports must never be committed; synthetic fixtures are fine
 *.csv
 !tests/fixtures/*.csv
+.cache/

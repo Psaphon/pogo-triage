@@ -12,6 +12,8 @@ from pogo_triage.pokegenie import (
     parse_file,
     summarize,
 )
+from pogo_triage.sources import SourceError
+from pogo_triage.sources.pvpoke import fetch_rankings
 
 
 @click.group()
@@ -48,3 +50,20 @@ def parse(csv_path: Path, columns_path: Path | None) -> None:
     click.echo(f"{counts.pop('total')} records")
     for name, count in counts.items():
         click.echo(f"{name}: {count}")
+
+
+@main.command()
+@click.option("--offline", is_flag=True, help="Read only the cache; make no requests.")
+@click.option(
+    "--cache-dir",
+    type=click.Path(file_okay=False, path_type=Path),
+    help="Cache directory (default: $POGO_CACHE_DIR or .cache/pogo-triage).",
+)
+def fetch(offline: bool, cache_dir: Path | None) -> None:
+    """Fetch upstream data into the cache and print summary counts."""
+    try:
+        rankings = fetch_rankings(cache_dir=cache_dir, offline=offline)
+    except SourceError as exc:
+        raise click.ClickException(str(exc)) from exc
+    for league, entries in rankings.items():
+        click.echo(f"pvpoke {league}: {len(entries)} entries")
