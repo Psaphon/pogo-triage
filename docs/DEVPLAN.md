@@ -72,7 +72,7 @@ The PM makes the lint and test jobs required checks on `develop` once this merge
 
 **Branch:** `feature/pokegenie-csv-parser`
 **Depends on:** project-skeleton
-**Status:** In Progress
+**Status:** Merged (#3)
 **Requires:** ai
 
 ### Goal
