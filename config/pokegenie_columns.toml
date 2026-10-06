@@ -1,0 +1,24 @@
+# Canonical field -> accepted Poke Genie header names.
+# Matching ignores case and surrounding whitespace. Add an alias here to
+# support a renamed header; no code change needed.
+
+[required]
+species = ["Name", "Species", "Pokemon"]
+cp = ["CP"]
+atk_iv = ["Atk IV", "Attack IV"]
+def_iv = ["Def IV", "Defense IV"]
+sta_iv = ["Sta IV", "Stamina IV", "HP IV"]
+
+[optional]
+form = ["Form"]
+nickname = ["Nickname", "Nick"]
+level = ["Level Min", "Level"]
+quick_move = ["Quick Move", "Fast Move"]
+charge_move = ["Charge Move", "Charge Move 1"]
+charge_move_2 = ["Charge Move 2"]
+catch_date = ["Catch Date", "Caught Date"]
+shiny = ["Shiny"]
+lucky = ["Lucky"]
+shadow = ["Shadow"]
+purified = ["Purified"]
+costume = ["Costume"]
