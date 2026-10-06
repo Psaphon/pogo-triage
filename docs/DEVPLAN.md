@@ -112,7 +112,7 @@ Parse a Poke Genie CSV export into typed records, mapping columns by header name
 
 **Branch:** `feature/pvpoke-rankings-ingest`
 **Depends on:** project-skeleton
-**Status:** Not Started
+**Status:** In Progress
 **Requires:** ai
 
 ### Goal

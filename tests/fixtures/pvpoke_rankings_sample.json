@@ -1,0 +1,161 @@
+{
+  "great": [
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 80.5,
+      "speciesId": "bulbasaur",
+      "speciesName": "Bulbasaur",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    },
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 75.2,
+      "speciesId": "squirtle",
+      "speciesName": "Squirtle",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    },
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 70.1,
+      "speciesId": "pikachu",
+      "speciesName": "Pikachu",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    }
+  ],
+  "master": [
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 90.3,
+      "speciesId": "charizard",
+      "speciesName": "Charizard",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    },
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 95.0,
+      "speciesId": "mewtwo",
+      "speciesName": "Mewtwo",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    },
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 88.8,
+      "speciesId": "snorlax",
+      "speciesName": "Snorlax",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    },
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 80.0,
+      "speciesId": "lapras",
+      "speciesName": "Lapras",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    }
+  ],
+  "ultra": [
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 85.0,
+      "speciesId": "venusaur",
+      "speciesName": "Venusaur",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    },
+    {
+      "moveset": [
+        "QUICK",
+        "CHARGE1",
+        "CHARGE2"
+      ],
+      "rating": 0,
+      "score": 84.2,
+      "speciesId": "blastoise",
+      "speciesName": "Blastoise",
+      "stats": {
+        "atk": 100.0,
+        "def": 100.0,
+        "hp": 100,
+        "product": 1000
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Upstream data sources. Each URL can be overridden by the env var named in
+# the comment (or by pointing POGO_SOURCES_CONFIG at another file).
+
+[pvpoke]
+# POGO_PVPOKE_GREAT_URL
+great = "https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/rankings/all/overall/rankings-1500.json"
+# POGO_PVPOKE_ULTRA_URL
+ultra = "https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/rankings/all/overall/rankings-2500.json"
+# POGO_PVPOKE_MASTER_URL
+master = "https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/rankings/all/overall/rankings-10000.json"
